@@ -429,6 +429,3 @@ app.listen(process.env.PORT,function(req,res){
     console.log("Server starting at port 8080");
 });
 
-app.use(cors({
-    origin: 'http://localhost:3000'
-}));
