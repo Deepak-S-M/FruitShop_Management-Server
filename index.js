@@ -30,8 +30,8 @@ pool.query('SELECT NOW()', (err, res) => {
 
 app.use(cors()); 
 
-app.get("/test",function(req,res){
-    res.send("Hello");
+app.get("/",function(req,res){
+    res.send("Hello please visit <a href='https://fruit-shop-three.vercel.app/'>my fruit shop billing website</a>");
 });
 
 // Function to get all fruits from the database
@@ -428,3 +428,7 @@ app.get('/fruits/selling-stocks', async (req, res) => {
 app.listen(process.env.PORT,function(req,res){
     console.log("Server starting at port 8080");
 });
+
+app.use(cors({
+    origin: 'https://fruit-shop-three.vercel.app/'
+  }));
