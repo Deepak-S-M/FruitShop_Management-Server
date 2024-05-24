@@ -430,5 +430,5 @@ app.listen(process.env.PORT,function(req,res){
 });
 
 app.use(cors({
-    origin: 'https://fruit-shop-three.vercel.app/'
-  }));
+    origin: 'http://localhost:3000'
+}));
